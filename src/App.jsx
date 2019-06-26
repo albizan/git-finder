@@ -1,38 +1,20 @@
-import React, { useState } from 'react'
-import http from './services/http'
-import Navbar from './components/Navbar'
-import Spinner from './components/Spinner'
-import UserWrapper from './components/UserWrapper'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import User from './pages/User'
 
-function App() {
-  const [loading, setLoading] = useState(false)
-  const [users, setUsers] = useState([])
-
-  const handleSearch = async (user) => {
-    setLoading(true)
-    try {
-      // Res.data.items is an array with the found users
-      const res = await http.get('', {
-        params: {
-          q: user,
-        },
-      })
-      // Extract all found users from response
-      const { items } = res.data
-      // Set new state
-      setUsers(items)
-      setLoading(false)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
+const App = () => {
   return (
-    <div>
-      <Navbar onSearch={handleSearch} />
-      {loading && <Spinner />}
-      {users.length !== 0 && <UserWrapper users={users} />}
-    </div>
+    <Router>
+      <Switch>
+        {/* Default Route to Home */}
+        <Route exact path="/" component={Home} />
+        <Route path="/user/:login" component={User} />
+        <Route path="/not-found" component={NotFound} />
+        <Redirect to="/not-found" />
+      </Switch>
+    </Router>
   )
 }
 
