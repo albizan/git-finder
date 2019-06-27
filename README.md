@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Front-End of Happy Doggy, made with React, tailwindcss and postcss
+Learning React, tailwindcss and postcss
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/388523ef-affc-4e04-9f3f-a770ca4774dc/deploy-status)](https://app.netlify.com/sites/findgituser/deploys)
 
 ## Available Scripts
 
