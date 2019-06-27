@@ -16,6 +16,7 @@ const User = ({ match }) => {
       setUser(data)
     }
     try {
+      setLoading(true)
       getUserDetailsFromGithub()
       setLoading(false)
     } catch (err) {
