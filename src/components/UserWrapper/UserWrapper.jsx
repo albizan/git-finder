@@ -8,7 +8,7 @@ const UserWrapper = ({ users }) => {
 
   return (
     <Fragment>
-      <div className="p-4 md:flex md:justify-left md:content-start md:flex-wrap">
+      <div className="container mx-auto p-2 sm:flex sm:justify-left sm:content-start sm:flex-wrap">
         {showUsers(users)}
       </div>
     </Fragment>
