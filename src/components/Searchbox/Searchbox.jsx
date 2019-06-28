@@ -27,7 +27,6 @@ const Searchbox = ({ onSearch }) => {
       <button
         type="submit"
         disabled={disabled}
-        onKey
         className={`rounded-full bg-blue-500 hover:bg-blue-700 text-white font-semibold px-4 py-2 ml-4 ${disabled &&
           'opacity-50 cursor-not-allowed'}`}
       >
