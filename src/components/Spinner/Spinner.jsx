@@ -3,7 +3,7 @@ import { ClapSpinner } from 'react-spinners-kit'
 
 const Spinner = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="p-6 h-full">
       <ClapSpinner size={50} color="#000" />
     </div>
   )
