@@ -17,7 +17,6 @@ const User = ({ match }) => {
     setLoading(true)
     try {
       const { data } = await http.get(`/users/${login}`)
-      console.log(data)
       setLoading(false)
       setUser(data)
     } catch (err) {
