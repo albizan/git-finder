@@ -1,5 +1,16 @@
 @tailwind base;
 
+.user-badge {
+  @apply w-24;
+  @apply text-center;
+  @apply px-1;
+  @apply py-2;
+  @apply rounded-full;
+  @apply mx-1;
+  @apply text-white;
+  @apply font-semibold;
+}
+
 @tailwind components;
 
 @tailwind utilities;
