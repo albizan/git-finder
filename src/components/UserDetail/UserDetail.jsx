@@ -21,7 +21,7 @@ const UserDetail = ({ user }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg mx-2 px-4 container md:mt-6 max-w-3xl mx-auto">
       <div
-        className="block md:flex md:items-center md:justify-between md:py-4"
+        className="block md:flex md:items-center md:justify-start md:py-4"
         id="image_and_info_wrapper"
       >
         <div className="flex items-center justify-center md:flex-shrink-0">
