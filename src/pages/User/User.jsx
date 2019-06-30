@@ -31,7 +31,7 @@ const User = ({ match }) => {
   }, [])
 
   return (
-    <div className="py-4 flex flex-col items-center justify-center">
+    <div className="p-4 flex flex-col items-center justify-center">
       {loading && <Spinner />}
       {error && <UserNotFound login={login} />}
       {user && <UserDetail user={user} />}
