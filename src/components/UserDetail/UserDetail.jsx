@@ -13,6 +13,7 @@ const UserDetail = ({ user }) => {
     email,
     company,
     website,
+    html_url,
     followers,
     following,
     public_gists,
@@ -31,7 +32,7 @@ const UserDetail = ({ user }) => {
             className="h-48 w-48 rounded-full mt-6 md:m-0 md:mx-4 md:h-32 md:w-32"
           />
         </div>
-        <div className="text-center text-gray-600 my-6 px-3 md:p-0 md:m-0 md:text-left md:pl-3">
+        <div className="flex-1 text-center text-gray-600 my-6 px-3 md:p-0 md:m-0 md:pl-5 md:text-left">
           <h3 className="text-xl font-semibold text-gray-800 md:text-2xl">{name}</h3>
           <Bio bio={bio} />
           <Info
@@ -41,6 +42,9 @@ const UserDetail = ({ user }) => {
             company={company}
             website={website}
           />
+          <a className="bg-gray-800 px-5 py-3 text-gray-300 font-semibold rounded" href={html_url}>
+            Visit Github Profile
+          </a>
         </div>
       </div>
       <Badges
