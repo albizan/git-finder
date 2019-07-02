@@ -42,7 +42,7 @@ const UserDetail = ({ user }) => {
             company={company}
             website={website}
           />
-          <a className="bg-gray-800 px-5 py-3 text-gray-300 font-semibold rounded" href={html_url}>
+          <a className="font-bold text-indigo-600 text-lg" href={html_url}>
             Visit Github Profile
           </a>
         </div>
