@@ -2,6 +2,7 @@ import React from 'react'
 import Bio from './Bio'
 import Info from './Info'
 import Badges from './Badges'
+import ReposWrapper from './ReposWrapper'
 
 const UserDetail = ({ user }) => {
   const {
@@ -18,6 +19,7 @@ const UserDetail = ({ user }) => {
     following,
     public_gists,
     public_repos,
+    repos_url,
   } = user
   return (
     <div className="bg-white shadow-lg rounded-lg mx-2 px-4 container md:mt-6 max-w-3xl mx-auto">
@@ -53,6 +55,7 @@ const UserDetail = ({ user }) => {
         gists={public_gists}
         repos={public_repos}
       />
+      <ReposWrapper repos_url={repos_url} />
     </div>
   )
 }
