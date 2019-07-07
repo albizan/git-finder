@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import http from '../../services/http'
-import Navbar from '../../components/Navbar'
+import Landing from '../../components/Landing'
 import Spinner from '../../components/Spinner'
 import UserWrapper from '../../components/UserWrapper'
 
@@ -28,11 +28,9 @@ function Home() {
   }
 
   return (
-    <div>
-      <Navbar onSearch={handleSearch} />
-      {loading && <Spinner />}
-      {users.length !== 0 && <UserWrapper users={users} />}
-    </div>
+    <Fragment>
+      <Landing />
+    </Fragment>
   )
 }
 
