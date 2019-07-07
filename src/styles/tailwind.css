@@ -1,5 +1,9 @@
 @tailwind base;
 
+/* Custom Styles */
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .user-badge {
   @apply w-24;
   @apply text-center;
