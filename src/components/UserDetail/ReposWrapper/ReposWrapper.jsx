@@ -18,6 +18,7 @@ const ReposWrapper = ({ repos_url }) => {
 
   useEffect(() => {
     getReposFromGithub()
+    // eslint-disable-next-line
   }, [])
 
   return (
