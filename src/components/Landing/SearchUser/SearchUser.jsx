@@ -33,7 +33,7 @@ const SearchUser = () => {
         />
         <button
           disabled={isDisabled}
-          className={`uppercase py-1 px-4 ml-4 rounded border border-yellow-600 font-bold text-yellow-600 hover:bg-yellow-600 hover:text-gray-900 ${isDisabled &&
+          className={`outline-none uppercase py-1 px-3 ml-2 border border-yellow-600 font-bold text-yellow-600 hover:bg-yellow-600 hover:text-gray-900 ${isDisabled &&
             'opacity-50 cursor-not-allowed'}`}
           type="submit"
         >
