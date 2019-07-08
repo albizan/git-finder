@@ -12,6 +12,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/user/:login" component={User} />
         <Route path="/not-found" component={NotFound} />
+        {/* If nothing matches, redirect to not-found page */}
         <Redirect to="/not-found" />
       </Switch>
     </Router>
