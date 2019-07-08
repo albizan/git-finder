@@ -7,14 +7,15 @@ import UserWrapper from '../../components/UserWrapper'
 function Home() {
   const [loading, setLoading] = useState(false)
   const [users, setUsers] = useState([])
+  const [loaded, setLoaded] = useState(false)
 
-  const handleSearch = async (user) => {
+  const handleSearch = async (username) => {
     setLoading(true)
     try {
       // Res.data.items is an array with the found users
       const res = await http.get('/search/users', {
         params: {
-          q: user,
+          q: username,
         },
       })
       // Extract all found users from response
@@ -22,6 +23,7 @@ function Home() {
       // Set new state
       setUsers(items)
       setLoading(false)
+      setLoaded(true)
     } catch (err) {
       console.log(err)
     }
@@ -29,7 +31,9 @@ function Home() {
 
   return (
     <Fragment>
-      <Landing />
+      <Landing onSubmit={handleSearch} />
+      {loading && <Spinner />}
+      {loaded && <UserWrapper users={users} />}
     </Fragment>
   )
 }
