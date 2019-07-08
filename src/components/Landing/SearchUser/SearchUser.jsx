@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 
-const SearchUser = () => {
+const SearchUser = ({ onSubmit }) => {
   /* Value is used to control the input component */
   const [value, setValue] = useState('')
 
@@ -10,6 +10,7 @@ const SearchUser = () => {
   /* Handle form submit, this fires when button gets clicked */
   const handleSubmit = (e) => {
     e.preventDefault()
+    onSubmit(value)
   }
 
   /* Handle input value change, this fires everytime input changes */
