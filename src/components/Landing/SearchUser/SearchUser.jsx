@@ -1,16 +1,20 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useContext } from 'react'
+import GithubContext from '../../../context/github/context'
 
-const SearchUser = ({ onSubmit }) => {
+const SearchUser = () => {
   /* Value is used to control the input component */
   const [value, setValue] = useState('')
 
   /* Used to disable submit button when nothing is typed in input field */
   const [isDisabled, setDisabled] = useState(true)
 
+  // Initialize context
+  const githubContext = useContext(GithubContext)
+
   /* Handle form submit, this fires when button gets clicked */
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSubmit(value)
+    githubContext.searchUsers(value)
   }
 
   /* Handle input value change, this fires everytime input changes */
