@@ -19,8 +19,8 @@
     "eject": "react-scripts eject",
     "dev": "npm-run-all -s build:css start",
     "build": "npm-run-all -s build:css && react-scripts build",
-    "watch:css": "postcss src/styles/tailwind.css -o src/index.css -w",
-    "build:css": "postcss src/styles/tailwind.css -o src/index.css"
+    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/index.css -w",
+    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/index.css"
   },
   "browserslist": {
     "production": [
