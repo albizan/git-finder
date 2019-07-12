@@ -1,16 +1,14 @@
 import React from 'react'
 
-import Searchbox from '../Searchbox'
+import SearchUser from './SearchUser'
 
 const Navbar = ({ onSearch }) => {
   return (
-    <div className="bg-white shadow-md py-2">
-      <div className="font-sans sm:flex sm:items-center sm:justify-around">
-        <div className="text-center text-3xl text-gray-700 font-semibold  mb-2 sm:mb-0 ">
-          Github Finder
-        </div>
+    <div className="bg-indigo-600 text-gray-300 py-2">
+      <div className="sm:flex sm:items-center sm:justify-around">
+        <div className="text-center text-3xl mb-2 sm:mb-0 ">Git Finder</div>
         <div className="">
-          <Searchbox onSearch={onSearch} />
+          <SearchUser onSearch={onSearch} />
         </div>
       </div>
     </div>
