@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Landing from '../../components/Landing'
 
-function Home() {
+function Home({ history }) {
   return (
     <Fragment>
-      <Landing />
+      <Landing history={history} />
     </Fragment>
   )
 }

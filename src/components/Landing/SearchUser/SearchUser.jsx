@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useContext } from 'react'
 import GithubContext from '../../../context/github/context'
 
-const SearchUser = () => {
+const SearchUser = ({ history }) => {
   /* Value is used to control the input component */
   const [value, setValue] = useState('')
 
@@ -13,9 +13,10 @@ const SearchUser = () => {
   const { searchUsers } = githubContext
 
   /* Handle form submit, this fires when button gets clicked */
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    searchUsers(value)
+    await searchUsers(value)
+    history.push('/users')
   }
 
   /* Handle input value change, this fires everytime input changes */

@@ -3,7 +3,7 @@ import Loader from '../Loader'
 import SearchUser from './SearchUser'
 import './Landing.css'
 
-const Landing = () => {
+const Landing = ({ history }) => {
   return (
     <Fragment>
       <div className="landing h-screen w-full flex flex-col items-center justify-center">
@@ -13,7 +13,7 @@ const Landing = () => {
         <div className="text-gray-300 font-thin text-xl">
           <p>Checkout repos, gists and followers</p>
         </div>
-        <SearchUser />
+        <SearchUser history={history} />
         <Loader color={'#FFFFFF'} />
       </div>
     </Fragment>
