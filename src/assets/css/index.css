@@ -576,9 +576,7 @@ video {
 
 /* Custom Styles */
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap');
 
 .user-badge {
   width: 6rem;
@@ -3551,7 +3549,7 @@ video {
 }
 
 .font-sans {
-  font-family: Montserrat, sans-serif;
+  font-family: Quicksand, sans-serif;
 }
 
 .font-serif {
@@ -10458,7 +10456,7 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: Montserrat, sans-serif;
+    font-family: Quicksand, sans-serif;
   }
 
   .sm\:font-serif {
@@ -17366,7 +17364,7 @@ video {
   }
 
   .md\:font-sans {
-    font-family: Montserrat, sans-serif;
+    font-family: Quicksand, sans-serif;
   }
 
   .md\:font-serif {
@@ -24274,7 +24272,7 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: Montserrat, sans-serif;
+    font-family: Quicksand, sans-serif;
   }
 
   .lg\:font-serif {
@@ -31182,7 +31180,7 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: Montserrat, sans-serif;
+    font-family: Quicksand, sans-serif;
   }
 
   .xl\:font-serif {
