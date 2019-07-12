@@ -10,11 +10,12 @@ const SearchUser = () => {
 
   // Initialize context
   const githubContext = useContext(GithubContext)
+  const { searchUsers } = githubContext
 
   /* Handle form submit, this fires when button gets clicked */
   const handleSubmit = (e) => {
     e.preventDefault()
-    githubContext.searchUsers(value)
+    searchUsers(value)
   }
 
   /* Handle input value change, this fires everytime input changes */
@@ -32,9 +33,9 @@ const SearchUser = () => {
         <input
           value={value}
           onChange={handleChange}
-          className="outline-none bg-transparent py-2 text-xl text-gray-300 border-b border-gray-300"
+          className="outline-none bg-transparent py-2 text-xl text-gray-500 border-b border-gray-300"
           placeholder="Enter A User"
-          type="text"
+          type="search"
         />
         <button
           disabled={isDisabled}
