@@ -8,11 +8,10 @@ const UserWrapper = () => {
   const { users, loaded } = githubContext
 
   const showUsers = () => {
+    if (!loaded) {
+      return null
+    }
     return users.map((user) => <User key={user.id} user={user} />)
-  }
-
-  if (!loaded) {
-    return null
   }
 
   return (
