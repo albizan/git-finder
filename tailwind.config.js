@@ -221,7 +221,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      serif: ['Georgia', 'Cambria', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {

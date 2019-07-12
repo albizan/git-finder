@@ -3555,7 +3555,7 @@ video {
 }
 
 .font-serif {
-  font-family: Merriweather, serif;
+  font-family: Georgia, Cambria, serif;
 }
 
 .font-mono {
@@ -10462,7 +10462,7 @@ video {
   }
 
   .sm\:font-serif {
-    font-family: Merriweather, serif;
+    font-family: Georgia, Cambria, serif;
   }
 
   .sm\:font-mono {
@@ -17370,7 +17370,7 @@ video {
   }
 
   .md\:font-serif {
-    font-family: Merriweather, serif;
+    font-family: Georgia, Cambria, serif;
   }
 
   .md\:font-mono {
@@ -24278,7 +24278,7 @@ video {
   }
 
   .lg\:font-serif {
-    font-family: Merriweather, serif;
+    font-family: Georgia, Cambria, serif;
   }
 
   .lg\:font-mono {
@@ -31186,7 +31186,7 @@ video {
   }
 
   .xl\:font-serif {
-    font-family: Merriweather, serif;
+    font-family: Georgia, Cambria, serif;
   }
 
   .xl\:font-mono {
