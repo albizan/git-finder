@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useState, useEffect } from 'react'
-import Spinner from '../../components/Spinner'
+import Loader from '../../components/Loader'
 import UserNotFound from '../../components/UserNotFound'
 import UserDetail from '../../components/UserDetail'
 import http from '../../services/http'
@@ -31,7 +32,7 @@ const User = ({ match }) => {
 
   return (
     <div className="p-4 flex flex-col items-center justify-center">
-      {loading && <Spinner />}
+      {loading && <Loader />}
       {error && <UserNotFound login={login} />}
       {user && <UserDetail user={user} />}
       <Link
