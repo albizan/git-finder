@@ -6,11 +6,10 @@ const Landing = () => {
   return (
     <Fragment>
       <div className="landing h-screen w-full flex flex-col items-center justify-center">
-        <div className="text-center text-yellow-600 font-serif">
-          <p className="text-6xl">Github Finder</p>
-          <p className="text-4xl">Profile Finder for Github</p>
+        <div className="text-center text-white">
+          <p className="text-6xl">Git Finder</p>
         </div>
-        <div className="text-gray-500 text-lg">
+        <div className="text-gray-300 text-lg">
           <p>Checkout repos, gists and followers</p>
         </div>
         <SearchUser />
