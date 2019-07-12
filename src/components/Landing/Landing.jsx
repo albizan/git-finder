@@ -1,14 +1,9 @@
-import React, { Fragment, useContext } from 'react'
-import GithubContext from '../../context/github/context'
+import React, { Fragment } from 'react'
 import Loader from '../Loader'
 import SearchUser from './SearchUser'
 import './Landing.css'
 
 const Landing = () => {
-  // Initialize context
-  const githubContext = useContext(GithubContext)
-  const { loading } = githubContext
-
   return (
     <Fragment>
       <div className="landing h-screen w-full flex flex-col items-center justify-center">
