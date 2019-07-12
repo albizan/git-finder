@@ -7,8 +7,18 @@ const Loader = ({ color }) => {
   const githubContext = useContext(GithubContext)
   const { loading } = githubContext
 
+  const classname = () => {
+    let classes = 'flex justify-center mt-6 '
+    if (loading) {
+      classes += 'opacity-100'
+    } else {
+      classes += 'opacity-0'
+    }
+    return classes
+  }
+
   return (
-    <div className="flex justify-center mt-6">
+    <div className={classname()}>
       <ClipLoader color={color} />
     </div>
   )
