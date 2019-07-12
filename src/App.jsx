@@ -2,16 +2,17 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import GithubState from './context/github/state'
 import Home from './pages/Home'
-import NotFound from './pages/NotFound'
+import Users from './pages/Users'
 import User from './pages/User'
+import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
     <GithubState>
       <Router>
         <Switch>
-          {/* Default Route to Home */}
           <Route exact path="/" component={Home} />
+          <Route exact path="/users" component={Users} />
           <Route path="/user/:login" component={User} />
           <Route path="/not-found" component={NotFound} />
           {/* If nothing matches, redirect to not-found page */}
