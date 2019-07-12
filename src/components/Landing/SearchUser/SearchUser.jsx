@@ -28,17 +28,17 @@ const SearchUser = () => {
   }
   return (
     <Fragment>
-      <form className="mt-6 py-2 flex items-center" onSubmit={handleSubmit}>
+      <form className="mt-8 py-2 flex items-center" onSubmit={handleSubmit}>
         <input
           value={value}
           onChange={handleChange}
-          className="outline-none bg-transparent py-1 text-gray-300 border-b border-yellow-600"
+          className="outline-none bg-transparent py-2 text-xl text-gray-300 border-b border-gray-300"
           placeholder="Enter A User"
           type="text"
         />
         <button
           disabled={isDisabled}
-          className={`outline-none uppercase py-1 px-3 ml-2 border border-yellow-600 font-bold text-yellow-600 hover:bg-yellow-600 hover:text-gray-900 ${isDisabled &&
+          className={`outline-none uppercase py-2 px-4 ml-4 rounded border border-gray-300 font-semibold text-xl text-gray-300 hover:bg-gray-300 hover:text-indigo-500 ${isDisabled &&
             'opacity-50 cursor-not-allowed'}`}
           type="submit"
         >
