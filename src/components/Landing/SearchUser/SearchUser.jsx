@@ -34,13 +34,13 @@ const SearchUser = ({ history }) => {
         <input
           value={value}
           onChange={handleChange}
-          className="outline-none bg-transparent py-2 text-xl text-gray-500 border-b border-gray-300"
+          className="outline-none bg-transparent py-2 text-sm md:text-lg text-gray-500 border-b border-gray-300"
           placeholder="Enter A User"
           type="search"
         />
         <button
           disabled={isDisabled}
-          className={`outline-none uppercase py-2 px-4 ml-4 rounded border border-gray-300 font-semibold text-xl text-gray-300 hover:bg-gray-300 hover:text-indigo-500 ${isDisabled &&
+          className={`outline-none uppercase py-2 px-4 ml-4 rounded border border-gray-300 font-semibold text-sm md:text-lg text-gray-300 hover:bg-gray-300 hover:text-indigo-500 ${isDisabled &&
             'opacity-50 cursor-not-allowed'}`}
           type="submit"
         >

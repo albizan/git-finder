@@ -6,11 +6,11 @@ import './Landing.css'
 const Landing = ({ history }) => {
   return (
     <Fragment>
-      <div className="landing h-screen w-full flex flex-col items-center justify-center">
-        <div className="text-center text-gray-200">
-          <p className="text-6xl">Git Finder</p>
+      <div className="landing h-screen w-full flex flex-col items-center justify-center text-center">
+        <div className="text-gray-200">
+          <p className="text-4xl md:text-6xl">Git Finder</p>
         </div>
-        <div className="text-gray-300 font-thin text-xl">
+        <div className="text-gray-300 font-thin md:text-2xl">
           <p>Checkout repos, gists and followers</p>
         </div>
         <SearchUser history={history} />
