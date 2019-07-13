@@ -16,7 +16,10 @@ const Searchbox = ({ onSearch }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center justify-center text-xs sm:text-sm">
+    <form
+      onSubmit={handleSubmit}
+      className="flex items-center justify-center text-xs mb-6 sm:mb-0 sm:text-sm"
+    >
       <input
         value={user}
         onChange={(e) => {
@@ -25,7 +28,7 @@ const Searchbox = ({ onSearch }) => {
           setDisabled(isDisabled)
         }}
         placeholder="Enter a user..."
-        className="outline-none rounded border-indigo-500 bg-indigo-500 text-lg text-gray-200 px-4 py-2"
+        className="outline-none rounded border-indigo-500 bg-indigo-500 text-gray-200 px-4 py-2"
         type="search"
       />
       <button
