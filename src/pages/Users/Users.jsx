@@ -4,10 +4,10 @@ import React, { Fragment, useContext } from 'react'
 import Navbar from '../../components/Navbar'
 import UserWrapper from '../../components/UserWrapper'
 
-const Users = () => {
+const Users = ({ history }) => {
   return (
     <Fragment>
-      <Navbar />
+      <Navbar history={history} />
       <UserWrapper />
     </Fragment>
   )

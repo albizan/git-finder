@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import GithubContext from '../../../context/github/context'
 
-const Searchbox = ({ onSearch }) => {
+const Searchbox = ({ history }) => {
   // Initialize context
   const githubContext = useContext(GithubContext)
   const { searchUsers } = githubContext
@@ -10,9 +10,10 @@ const Searchbox = ({ onSearch }) => {
   const [disabled, setDisabled] = useState(true)
 
   /* Handle form submit, this fires when button gets clicked */
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    searchUsers(user)
+    await searchUsers(user)
+    history.push('/users')
   }
 
   return (
