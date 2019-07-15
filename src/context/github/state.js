@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import { Provider } from './context'
 import reducer from './reducer'
-import { SET_USERS, SET_REPOS, SET_USER, SET_LOADING, RESET_LOADING, SET_LOADED } from '../types'
+import { SET_USERS, SET_USER, SET_LOADING, RESET_LOADING, SET_LOADED } from '../types'
 import http from '../../services/http'
 
 const GithubState = (props) => {

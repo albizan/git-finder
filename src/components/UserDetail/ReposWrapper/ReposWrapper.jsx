@@ -6,7 +6,6 @@ const ReposWrapper = ({ repos_url }) => {
   const [repos, setRepos] = useState([])
 
   const getReposFromGithub = async () => {
-    console.log(repos_url)
     const { data } = await http.get(repos_url)
     setRepos(data)
   }

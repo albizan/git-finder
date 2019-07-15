@@ -1,5 +1,4 @@
 export const SET_USERS = 'SEARCH_USERS'
-export const SET_REPOS = 'GET_REPOS'
 export const SET_USER = 'GET_USER'
 export const SET_LOADING = 'SET_LOADING'
 export const RESET_LOADING = 'RESET_LOADING'

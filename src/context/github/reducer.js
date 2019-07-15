@@ -1,4 +1,4 @@
-import { SET_USERS, SET_REPOS, SET_USER, SET_LOADING, RESET_LOADING, SET_LOADED } from '../types'
+import { SET_USERS, SET_USER, SET_LOADING, RESET_LOADING, SET_LOADED } from '../types'
 
 export default (state, { type, payload }) => {
   switch (type) {
@@ -26,6 +26,10 @@ export default (state, { type, payload }) => {
       return {
         ...state,
         loaded: true,
+      }
+    default:
+      return {
+        ...state,
       }
   }
 }
