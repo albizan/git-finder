@@ -55,7 +55,7 @@ const UserDetail = ({ user }) => {
         gists={public_gists}
         repos={public_repos}
       />
-      <ReposWrapper repos_url={repos_url} />
+      {repos_url && <ReposWrapper repos_url={repos_url} />}
     </div>
   )
 }

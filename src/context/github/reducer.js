@@ -1,19 +1,16 @@
-import {
-  SET_USERS,
-  CLEAR_USERS,
-  GET_REPOS,
-  GET_USER,
-  SET_LOADING,
-  RESET_LOADING,
-  SET_LOADED,
-} from '../types'
+import { SET_USERS, SET_REPOS, SET_USER, SET_LOADING, RESET_LOADING, SET_LOADED } from '../types'
 
-export default (state, action) => {
-  switch (action.type) {
+export default (state, { type, payload }) => {
+  switch (type) {
     case SET_USERS:
       return {
         ...state,
-        users: action.payload,
+        users: payload,
+      }
+    case SET_USER:
+      return {
+        ...state,
+        user: payload,
       }
     case SET_LOADING:
       return {

@@ -1,15 +1,7 @@
 import React, { useReducer } from 'react'
 import { Provider } from './context'
 import reducer from './reducer'
-import {
-  SET_USERS,
-  CLEAR_USERS,
-  GET_REPOS,
-  GET_USER,
-  SET_LOADING,
-  RESET_LOADING,
-  SET_LOADED,
-} from '../types'
+import { SET_USERS, SET_REPOS, SET_USER, SET_LOADING, RESET_LOADING, SET_LOADED } from '../types'
 import http from '../../services/http'
 
 const GithubState = (props) => {
@@ -50,8 +42,19 @@ const GithubState = (props) => {
   // Get Repos
 
   // Get User
-
-  // Clear Users
+  async function getUserDetailsFromGithub(username) {
+    setLoading()
+    try {
+      const { data } = await http.get(`/users/${username}`)
+      resetLoading()
+      dispatch({
+        type: SET_USER,
+        payload: data,
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   // Set loading
   const setLoading = () => {
@@ -83,6 +86,7 @@ const GithubState = (props) => {
         loaded: state.loaded,
         repos: state.repos,
         searchUsers,
+        getUserDetailsFromGithub,
       }}
     >
       {props.children}

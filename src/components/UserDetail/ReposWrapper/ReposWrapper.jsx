@@ -6,14 +6,16 @@ const ReposWrapper = ({ repos_url }) => {
   const [repos, setRepos] = useState([])
 
   const getReposFromGithub = async () => {
+    console.log(repos_url)
     const { data } = await http.get(repos_url)
     setRepos(data)
   }
 
-  const renderRepos = (repos) => {
-    if (repos) {
-      return repos.map((repo) => <RepoItem repo={repo} key={repo.id} />)
+  const renderRepos = () => {
+    if (!repos === 0) {
+      return null
     }
+    return repos.map((repo) => <RepoItem repo={repo} key={repo.id} />)
   }
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const ReposWrapper = ({ repos_url }) => {
     <Fragment>
       <div className="px-1 text-center md:text-left">
         <h3 className="text-lg text-gray-700 font-bold">Repos</h3>
-        {renderRepos(repos)}
+        {renderRepos()}
       </div>
     </Fragment>
   )
